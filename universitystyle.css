@@ -1,0 +1,554 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins,sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image:  linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(uni-img/uni-hall.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 5px 20px;
+    position:relative;
+    z-index: 999;
+    width: 100%;
+
+}
+nav img{
+    width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    transition: 1s
+}
+nav img:hover{
+    transform: rotate(360deg);
+}
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+.nav-link ul li{
+    display:inline-block;
+    padding: 10px 15px;
+    list-style: none;
+    position: relative;
+    margin-bottom: 15px; 
+}
+.nav-link ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+.nav-link ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    display: block;
+    background: rgb(0, 106, 255);
+    transition: 0.7s;
+}
+.nav-link ul li:hover::after{
+    width: 100%;
+}
+
+.text{
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    flex-direction: column;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    color: white;
+    display: block;
+}
+.text h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+.text p{
+    font-size: 20px;
+    margin: 40px 0 ;
+}
+
+.btn{
+    color: white;
+    font: 16px;
+    border-radius: 10px;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid white;
+}
+.btn:hover{
+    background: rgb(0, 106, 255);
+    transition: 0.7s;
+    border:rgb(0, 106, 255);
+}
+nav .fa-solid{
+    display: none;
+}
+@media(max-width:700px){
+    .text h1{
+        font-size: 25px;
+    }
+    .nav-link{
+     width: 200px;
+     height: 100vh;
+     display: block;
+     position: absolute;
+     background:rgb(0, 106, 255);
+     top: 0;
+     right: -200px;
+     z-index: 2;
+     text-align: left;
+     transition: 1s;
+    }
+    .nav-link ul li{
+     display: block;
+     left: 10px;
+     top: 10px;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 30px;
+        margin: 10px;
+        color: white;
+    }
+    .fa-bars{
+        position: relative;
+        bottom: 20px;
+        left: 5px;
+    }
+}
+.courses{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.courses h1{
+    font-size: 40px;
+    font-weight: 200;
+}
+.courses p{
+    font-size: 16px;
+    color: #777;
+    margin-top: 15px;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 75px;
+    margin-bottom: 50px;
+    width: 80%;
+}
+.column{
+    flex-basis: 31%;
+    background: rgba(83, 188, 241, 0.4);
+    border-radius: 20px;
+    padding: 30px 15px;
+    margin-bottom: 15px;
+    transition: 0.6s;
+
+}
+.column:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 106, 255,04);
+}
+@media (max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+  
+}
+.compus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.compus h1{
+    font-size: 40px;
+    font-weight: 200;
+}
+.compus p{
+    font-size: 16px;
+    color: #777;
+    margin-top: 15px;
+}
+.col-img{
+    flex-basis: 31%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+}
+ img{
+    width: 100%;
+ }
+ .heading{
+     width: 100%;
+     height: 100%;
+     background:transparent;
+     position: absolute;
+     top: 0;
+     left: 0;
+     transition: 0.7s;
+ }
+ .heading:hover{
+     background: rgba(83, 188, 241, 0.4);
+ }
+ .heading h3{
+     position: absolute;
+     bottom: 0;
+     left: 35%;
+     font-size: 25px;
+     font-weight: 500;
+     color: white;
+     opacity: 0;
+     transition: 0.7s;
+ }
+ .heading:hover h3{
+     bottom: 49%;
+     opacity: 1;
+ }
+
+ .feature{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin-top: 100px;
+     flex-direction: column;
+ }
+ .feature h1{
+     font-size: 40px;
+     font-weight: 200;
+ }
+ .feature p{
+     font-size: 16px;
+     color: #777;
+ }
+.feature-img{
+    flex-basis: 32%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+.feature-img img{
+width: 100%;
+min-height: 50vh;
+margin-bottom: 20px;
+border-radius: 20px;
+}
+.students{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    text-align: center;
+}
+.students h1{
+    font-size: 40px;
+    font-weight: 200;
+}
+.students p{
+    font-size: 16;
+    color: #777;
+}
+.review{
+   flex-basis: 44%;
+   display: flex;
+   padding: 25px;
+   position: relative;
+   text-align: left;
+   width: 90%;
+   background: rgba(141, 190, 239, 0.4);
+   border-radius: 20px;
+   margin: 15px;
+}
+.review img{
+    height: 40px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.review p{
+    font-size: 13px;
+    font-weight: 400;
+}
+.review .fa{
+    color: #f44336;
+}
+.enroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(uni-img/enroll.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    margin:100px auto ;
+    padding: 150px 0;
+    text-align: center;
+}
+.enroll h1{
+    color: white;
+    font-size: 50px;
+    margin: 20px;
+}
+@media (max-width:700px){
+    .enroll h1{
+        font-size: 20px;
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin:50px 0 25px;
+    padding: 10px 30px;
+    text-align: center;
+}
+.footer h4{
+    font-size: 20px;
+    font-weight: 300;
+    padding: 50px 0 25px;
+}
+.footer p{
+    color: #777;
+    line-height: 30px;
+}
+.social{
+    margin:50px 0 20px;
+}
+.social .fa{
+    margin: 0 20px;
+}
+.social .fa-facebook{
+    color: rgb(73, 97, 248);
+}
+.social .fa-twitter{
+    color:rgb(73, 166, 248) ;
+}
+.social .fa-linkedin{
+    color: blue;
+}
+.social .fa-youtube{
+    color: red;
+}
+.about-header{
+    width: 100%;
+    min-height: 50vh;
+    background-image:  linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(uni-img/graduate.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 110px;
+}
+.about-header .text h1{
+    font-size: 30px;
+}
+.about-header nav{
+    margin-top: -110px;
+}
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    padding: 15px 20px;
+}
+.info-heading{
+    flex-basis: 48%;
+    margin: 50px;
+    text-align: left;
+    width: 100%;
+}
+
+.info-heading img{
+    width: 100%;
+}
+.info-heading h1{
+    font-size: 35px;
+    padding-top: 0;
+    position: relative;
+    bottom: 40px;
+}
+.info-heading p{
+    color: #777;
+    padding-top: 0;
+    bottom: 30px;
+    position: relative;
+}
+.info-heading a{
+    border: 1px solid rgb(0, 145, 255);
+    color:rgb(0, 145, 255) ;
+}
+.info a:hover{
+    color: white;
+}
+@media (max-width:700px){
+    .info-heading{
+        text-align: center;
+    }
+    .info-heading h1{
+        font-size: 20px;
+    }
+    .info-heading p{
+        font-size: 15px;
+    }
+}
+.blogs{
+    display: flex;
+    padding: 50px 0;
+    margin: auto;
+    justify-content: space-around;
+
+}
+.blog-left{
+    flex-basis: 65%;
+    text-align: left;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h2{
+    margin-top: 30px;
+}
+.blog-left p{
+    color: #777;
+    margin-top: 20px;
+}
+.blogs .row{
+    align-items: flex-start;
+}
+.blog-right{
+    flex-basis: 32%;
+    
+}
+.blog-right h3{
+    background-color: rgb(0, 145, 255);
+    color: white;
+    padding: 7px 0;
+    margin-bottom: 15px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+}
+.comment-blogs{
+    border: 1px solid #777;
+    margin: 100px 0 100px;
+    padding: 20px;
+}
+.comment input , .comment textarea{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    background: #f0f0f0;
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+.comment .btn{
+    border: none;
+    background: rgb(0, 145, 255);
+    cursor: pointer;
+}
+.contactus{
+    width: 80%;
+    padding: 30px 0;
+    margin: auto;
+    margin-top: 50px;
+}
+.contactus iframe{
+    width: 100%;
+}
+.contactus2{
+    width: 80%;
+    display: flex;
+    margin:auto;
+    text-align: center;
+}
+.contactus2 .information{
+    flex-basis: 60%;
+    text-align: center;
+}
+.contact-icon i{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px 0 ;
+    color: #f44336;
+    font-size: 20px;
+}
+.contact-icon span{
+    position: relative;
+    bottom: 60px;
+    left: 30px;
+}
+.contactus2 span p{
+    color: #777;
+}
+
+.contactus2 .comment-blogs{
+    border: none;
+    position: relative;
+    bottom: 60px;
+}
+
+.contactus2 .row{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+@media (max-width:700px){
+    .contactus2{
+        display: flex;
+        flex-direction: column;
+    }
+    .contactus2 .comment-blogs{
+        width: 100vw;
+        position: relative;
+        right: 40px;
+    }
+    .contact-icon span{
+        font-size: 25px;
+    }
+}
